@@ -35,9 +35,6 @@ class Pixel :
     def addNeighbors(self, pixel):
         self.neighbors.append(pixel)
 
-    def clone(self):
-        return Pixel(self.grayScale, self.label, neighbors=self.neighbors)
-
 class ImageGrayscale:
     def __init__(self, pixels):
         '''
