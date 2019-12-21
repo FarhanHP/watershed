@@ -38,16 +38,6 @@ class Pixel :
     def clone(self):
         return Pixel(self.grayScale, self.label, neighbors=self.neighbors)
 
-    @staticmethod
-    def pixelsClone(pixels):
-        clone = list()
-        for i in range(len(pixels)):
-            sub_clone = list()
-            for j in range(len(pixels[0])):
-                sub_clone.append(pixels[i][j].clone())
-            clone.append(sub_clone)
-        return clone
-
 class ImageGrayscale:
     def __init__(self, pixels):
         '''
