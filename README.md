@@ -13,12 +13,19 @@ Adapun penjelasan bagaimana method watershedVS bekerja adalah sebagai berikut:
   3.) Masukkan pixel yang nilai grayscale-nya sama dengan threshold ke dalam antrian FIFO.
   
   4.) Ambil(pop) pixel yang ada di dalam antrian :
+  
          p <- antrian.pop().
+         
          Q <- himpunan pixel tetangga dari p.
+         
          tambahkan Q ke dalam antrian.
+         
          pada setiap Q, periksa label masing-masing anggota Q:
+         
             jika terdapat >1 jenis label basin, maka label p adalah watershed.
+            
             jika terdapat 1 jenis label basin, maka label p adalah sama dengan label tersebut(p menjadi bagian suatu basin).
+            
             jika terdapat 0 jenis label basin, maka label p adalah label basin yang baru (p menjadi basin baru).
   
   5.) Jika panjang antrian > 0 maka kembali ke step-4, sebaliknya maka lanjut ke step-6.
